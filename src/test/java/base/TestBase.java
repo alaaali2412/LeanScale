@@ -1,5 +1,6 @@
 package base;
 
+import Utilities.Helper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -7,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 
@@ -72,5 +74,15 @@ public class TestBase {
                 connectors.DriverFactory.storedDrivers.forEach(WebDriver::quit);
             }
         });
+    }
+
+    /*method to take ScreenShot incase the test fail*/
+    @AfterMethod
+    public void screenShotOnFailure(ITestResult result) {
+        if (result.getStatus() == ITestResult.FAILURE) {
+            System.out.println("Failed");
+            System.out.println("Taking Screenshot....");
+            Helper.captureScreenShot(driver, result.getName());
+        }
     }
 }
