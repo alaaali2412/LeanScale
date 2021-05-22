@@ -1,0 +1,17 @@
+/Users/alaaali/Downloads/LeanScale/src/test/java/tests/addItemsToCart/GustUserAddItemToCartTest.java
+/Users/alaaali/Downloads/LeanScale/src/test/java/tests/registerAccount/TC05_PasswordFormatValidationTest.java
+/Users/alaaali/Downloads/LeanScale/src/test/java/tests/addItemsToCart/EditItemQuantityAfterAddingItToCartTest.java
+/Users/alaaali/Downloads/LeanScale/src/test/java/tests/addItemsToCart/SelectColorAndSizeForAnItemTest.java
+/Users/alaaali/Downloads/LeanScale/src/test/java/tests/registerAccount/TC06_VerifyThatPasswordAndConfirmPasswordMustMatchTest.java
+/Users/alaaali/Downloads/LeanScale/src/test/java/tests/registerAccount/TC02_RegisterWithExistEmailTest.java
+/Users/alaaali/Downloads/LeanScale/src/test/java/tests/facebookLogin/LoginWithFacebookAccountTest.java
+/Users/alaaali/Downloads/LeanScale/src/test/java/tests/registerAccount/TC04_RegistrationEmailFormatValidationTest.java
+/Users/alaaali/Downloads/LeanScale/src/test/java/base/TestBase.java
+/Users/alaaali/Downloads/LeanScale/src/test/java/tests/addItemsToCart/RegisteredUserAddItemToCartTest.java
+/Users/alaaali/Downloads/LeanScale/src/test/java/tests/addItemsToCart/AddItemQuantityBeforeAddingItToCartTest.java
+/Users/alaaali/Downloads/LeanScale/src/test/java/tests/registerAccount/TC01_RegisterNewUserTest.java
+/Users/alaaali/Downloads/LeanScale/src/test/java/tests/registerAccount/TC03_UserCannotRegisterWithoutAddingMandatoryFieldsTest.java
+/Users/alaaali/Downloads/LeanScale/src/test/java/base/DriverFactory.java
+/Users/alaaali/Downloads/LeanScale/src/test/java/tests/addItemsToCart/SelectItemFromHomeScreenTest.java
+/Users/alaaali/Downloads/LeanScale/src/test/java/tests/addItemsToCart/AddItemToCartAfterOpeningTheItemDetialsScreenTest.java
+/Users/alaaali/Downloads/LeanScale/src/test/java/tests/addItemsToCart/ChangeColorAndSizeAfterAddingItToCartTest.java
