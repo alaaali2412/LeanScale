@@ -1,9 +1,0 @@
-base/TestBase.class
-tests/facebookLogin/LoginWithFacebookAccountTest.class
-tests/registerAccount/TC01_RegisterNewUserTest.class
-base/TestBase$1.class
-tests/registerAccount/TC04_RegistrationEmailFormatValidationTest.class
-tests/registerAccount/TC05_PasswordFormatValidationTest.class
-tests/registerAccount/TC02_RegisterWithExistEmailTest.class
-tests/registerAccount/TC06_VerifyThatPasswordAndConfirmPasswordMustMatchTest.class
-tests/registerAccount/TC03_UserCannotRegisterWithoutAddingMandatoryFieldsTest.class

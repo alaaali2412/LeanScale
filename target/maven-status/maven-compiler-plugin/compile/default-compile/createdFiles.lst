@@ -1,6 +1,0 @@
-base/PageBase.class
-pages/PageGenerator.class
-pages/HomePage.class
-pages/RegistrationPage.class
-pages/ProfilePage.class
-pages/LoginPage.class
