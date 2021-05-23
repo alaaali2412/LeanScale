@@ -16,6 +16,17 @@ import java.util.NoSuchElementException;
 import static io.restassured.RestAssured.given;
 
 public class APIsActions {
+    Map<String, String> sessionHeaders;
+
+    public Map<String, String> setSessionHeaders(String key, String value) {
+        this.sessionHeaders = new HashMap<>();
+        sessionHeaders.put(key, value);
+        return sessionHeaders;
+    }
+
+    public enum RequestType {
+        POST, GET, DELETE, PUT
+    }
 
     public Response sendRequest(RequestType requestType, String request, RequestSpecification specs) {
         switch (requestType) {
@@ -33,50 +44,19 @@ public class APIsActions {
         return null;
     }
 
-    public RequestSpecBuilder initializeBuilder(String baseUri, ContentType contentType) {
+    public RequestSpecification prepareRequestSpecs(String baseUri, ContentType contentType,  Map<String, String> sessionHeaders) {
         RequestSpecBuilder builder = new RequestSpecBuilder();
-        builder.setBaseUri(baseUri).setContentType(contentType);
-        return builder;
-    }
-
-    public RequestSpecification prepareRequestSpecs(String baseUri, ContentType contentType ) {
-        RequestSpecBuilder builder = initializeBuilder(baseUri, contentType);
+        builder.setBaseUri(baseUri).setContentType(contentType).addHeaders(sessionHeaders);
         return builder.build();
     }
 
-    public ResponseSpecBuilder responseSpecBuilder() {
-        ResponseSpecBuilder responseSpecBuilder = new ResponseSpecBuilder();
-        responseSpecBuilder.expectStatusCode(200);
-        return responseSpecBuilder;
-    }
-
-
-    public int validateValueInResponse(Response response, String ValueToValidate) {
+    public int validateIntValuesInResponse(Response response, String ValueToValidate) {
         JsonPath path = response.jsonPath();
         return path.get(ValueToValidate);
     }
 
-    public enum RequestType {
-        POST, GET, DELETE, PUT
-    }
-
-    public String getParamInJsonArray(JsonPath path, String ValueToValidate, String list) {
-        List<HashMap<String, Object>> data = path.getList(list);
-        for (HashMap<String, Object> singleObject : data) {
-            if (singleObject.containsValue(ValueToValidate)) {
-                return singleObject.toString();
-            }
-        }
-        throw new NoSuchElementException("Can't find param ");
-    }
-
-    public int getIntValueFromArray(String arrayToSplit, String firstIndex, String secondIndex) {
-        String[] parts = arrayToSplit.split(firstIndex);
-        String[] part = parts[0].split(secondIndex);
-        return Integer.parseInt(part[1]);
-    }
-
-    public Response prepareGetAPIsResponse(String baseURI, RequestType requestType, String serviceName, ContentType contentType) {
-        return sendRequest(requestType, serviceName, prepareRequestSpecs(baseURI, contentType));
+    public Response prepareGetAPIResponse(String baseURI,String serviceName, RequestType requestType, ContentType contentType,
+                                         Map<String, String> sessionHeaders) {
+        return sendRequest(requestType, serviceName, prepareRequestSpecs(baseURI, contentType, sessionHeaders));
     }
 }
