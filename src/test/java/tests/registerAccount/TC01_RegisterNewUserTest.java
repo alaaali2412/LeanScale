@@ -1,12 +1,14 @@
 package tests.registerAccount;
 
 import base.TestBase;
+import io.qameta.allure.Description;
 import org.testng.annotations.Test;
 import pages.*;
 
 public class TC01_RegisterNewUserTest extends TestBase {
 
-    @Test
+    @Test()
+    @Description("add new user")
     public void RegisterNewUser() {
         PageGenerator.GetInstance( HomePage.class).clickCreateAnAccountBtn();
         PageGenerator.GetInstance( RegistrationPage.class).clearRegistrationFields();

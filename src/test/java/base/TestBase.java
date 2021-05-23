@@ -1,6 +1,7 @@
 package base;
 
 import Utilities.Helper;
+import io.qameta.allure.Attachment;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,6 +14,7 @@ import org.testng.annotations.*;
 
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
@@ -84,5 +86,13 @@ public class TestBase {
             System.out.println("Taking Screenshot....");
             Helper.captureScreenShot(driver, result.getName());
         }
+    }
+
+    @Attachment
+    public static String logOutput(List<String> outputList) {
+        String output = "";
+        for (String o : outputList)
+            output += o + "<br/>";
+        return output;
     }
 }

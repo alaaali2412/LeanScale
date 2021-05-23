@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Test Suite" >
-    <test name="Registration test suite" parallel="classes" thread-count="2">
+    <test name="Registration test suite" parallel="classes" thread-count="15">
         <classes>
             <class name="tests.registerAccount.TC01_RegisterNewUserTest"/>
             <class name="tests.registerAccount.TC02_RegisterWithExistEmailTest"/>
