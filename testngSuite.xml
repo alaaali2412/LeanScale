@@ -13,6 +13,7 @@
             <class name="tests.addItemsToCart.TC02_RegisteredUserAddItemToCartTest"></class>
             <class name="tests.addItemsToCart.TC03_EditItemQuantityToInValidValuesTest"></class>
             <class name="tests.addItemsToCart.TC04_AddingItemToCartWithSelectingSpecificationsTest"></class>
+            <class name="tests.api.APITest"></class>
         </classes>
     </test>
 </suite>
