@@ -61,7 +61,7 @@ public class ProductDetailPage extends PageBase {
         }
     }
 
-    public void clickAddToCart() {
+    public void clickAddToCart()  {
         clickButton(addToCartBtn);
     }
 

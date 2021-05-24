@@ -9,7 +9,7 @@ import pages.ProductDetailPage;
 public class TC04_AddingItemToCartWithSelectingSpecificationsTest extends TestBase {
 
     @Test
-    public void AddingItemToCartWithSelectingSpecifications(){
+    public void AddingItemToCartWithSelectingSpecifications()  {
         PageGenerator.GetInstance(HomePage.class).openProductDetailPageOfAnItem("Argus All-Weather Tank");
         PageGenerator.GetInstance(ProductDetailPage.class).clickAddToCart();
         PageGenerator.GetInstance(ProductDetailPage.class).assertColorAndSizeErrorMsg();

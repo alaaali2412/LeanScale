@@ -13,7 +13,7 @@ public class TC02_RegisteredUserAddItemToCartTest extends TestBase {
     * user select item color and item size then click add to cart
     * verify that item added by asserting the success message */
     @Test
-    public void RegisteredUserAddItemToCart(){
+    public void RegisteredUserAddItemToCart() {
         PageGenerator.GetInstance( HomePage.class).clickSignInBtn();
         PageGenerator.GetInstance( LoginPage.class).userLogin();
         PageGenerator.GetInstance( LoginPage.class).clickSignInBtn();

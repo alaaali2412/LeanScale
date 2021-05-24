@@ -9,7 +9,7 @@ import pages.ProductDetailPage;
 public class TC03_EditItemQuantityToInValidValuesTest extends TestBase {
 
     @Test
-    public void EditItemQuantityToInValidValues()  {
+    public void EditItemQuantityToInValidValues() {
 
         //add quantity 0 value
         PageGenerator.GetInstance(HomePage.class).openProductDetailPageOfAnItem("Argus All-Weather Tank");
