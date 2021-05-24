@@ -13,9 +13,9 @@ public class TC01_GustUserAddItemToCartTest extends TestBase {
      * verify that item added by asserting the success message */
     @Test
     public void GustUserAddItemToCart () {
-        PageGenerator.GetInstance(HomePage.class).openProductDetailPageOfAnItem("Radiant Tee");
+        PageGenerator.GetInstance(HomePage.class).openProductDetailPageOfAnItem("Breathe-Easy Tank");
         PageGenerator.GetInstance(ProductDetailPage.class).selectItemSize("M");
-        PageGenerator.GetInstance(ProductDetailPage.class).selectItemColor("rgba(235, 103, 3, 1)", "Orange");
+        PageGenerator.GetInstance(ProductDetailPage.class).selectItemColor("rgba(239, 61, 255, 1)", "Purple");
         PageGenerator.GetInstance(ProductDetailPage.class).clickAddToCart();
         PageGenerator.GetInstance(ProductDetailPage.class).assertAddToCartSuccessMsg();
     }
