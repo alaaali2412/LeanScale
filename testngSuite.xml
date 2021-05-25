@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Test Suite" >
-    <test name="Registration test suite" parallel="classes" thread-count="15">
+<suite name="Test Suite" parallel="classes" thread-count="40">
+    <parameter name="browser" value="chrome" />
+    <test name="Registration test suite chrome" >
         <classes>
             <class name="tests.registerAccount.TC01_RegisterNewUserTest"/>
             <class name="tests.registerAccount.TC02_RegisterWithExistEmailTest"/>
-            <class name="tests.registerAccount.TC03_UserCannotRegisterWithoutAddingMandatoryFieldsTest"></class>
-            <class name="tests.registerAccount.TC04_RegistrationEmailFormatValidationTest"></class>
-            <class name="tests.registerAccount.TC05_PasswordFormatValidationTest"></class>
-            <class name="tests.registerAccount.TC06_VerifyThatPasswordAndConfirmPasswordMustMatchTest"></class>
-            <class name="tests.addItemsToCart.TC01_GustUserAddItemToCartTest"></class>
-            <class name="tests.addItemsToCart.TC02_RegisteredUserAddItemToCartTest"></class>
-            <class name="tests.addItemsToCart.TC03_EditItemQuantityToInValidValuesTest"></class>
-            <class name="tests.addItemsToCart.TC04_AddingItemToCartWithSelectingSpecificationsTest"></class>
-            <class name="tests.api.APITest"></class>
+            <class name="tests.registerAccount.TC03_UserCannotRegisterWithoutAddingMandatoryFieldsTest"/>
+            <class name="tests.registerAccount.TC04_RegistrationEmailFormatValidationTest"/>
+            <class name="tests.registerAccount.TC05_PasswordFormatValidationTest"/>
+            <class name="tests.registerAccount.TC06_VerifyThatPasswordAndConfirmPasswordMustMatchTest"/>
+            <class name="tests.addItemsToCart.TC01_GustUserAddItemToCartTest"/>
+            <class name="tests.addItemsToCart.TC02_RegisteredUserAddItemToCartTest"/>
+            <class name="tests.addItemsToCart.TC03_EditItemQuantityToInValidValuesTest"/>
+            <class name="tests.addItemsToCart.TC04_AddingItemToCartWithSelectingSpecificationsTest"/>
+            <class name="tests.api.APITest"/>
         </classes>
     </test>
 </suite>

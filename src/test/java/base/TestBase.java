@@ -33,7 +33,7 @@ public class TestBase {
 
     @BeforeClass
     @Parameters({"browser"})
-    public void startDriver(@Optional("chrome") String browserName) {
+    public void startDriver(@Optional() String browserName) {
         if (connectors.DriverFactory.getDriver() == null) {
             OpenBrowserName(browserName);
             connectors.DriverFactory.addDriver(driver);
@@ -62,8 +62,6 @@ public class TestBase {
             case "IE":
                 System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + "/Drivers/IEDriverServer");
                 driver = new InternetExplorerDriver();
-                break;
-            default:
                 break;
         }
     }
